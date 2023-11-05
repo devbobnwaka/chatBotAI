@@ -1,24 +1,16 @@
-from neuralintents.assistants import BasicAssistant
+from fastapi import FastAPI
+from pydantic import BaseModel
+from bot import process_message
+
+class Message(BaseModel):
+    msg: str
 
 
-stocks = ['AAPL', 'META', 'TSLA', 'NVDA']
+app = FastAPI()
 
-def print_stocks():
-    print(f'Stocks: {stocks}')
 
-assistant = BasicAssistant('intents.json', method_mappings={
-    "stocks": print_stocks,
-    "goodbye": lambda: exit(0)
-})
+@app.post("/chatbot/")
+async def chatbot(msg: Message):
+    message = process_message(msg.msg)
+    return message
 
-assistant.fit_model(epochs=50)
-assistant.save_model()
-
-done = False
-
-while not done:
-    message = input("Enter a message: ")
-    if message == "STOP":
-        done = True
-    else:
-        print(assistant.process_input(message))
