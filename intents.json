@@ -19,6 +19,21 @@
       "responses": ["# flights are available"],
       "context_set": ""
     },
+        {"tag": "extra_feezs",
+      "patterns": ["What are the fees for extra baggages", "Are there fees for extra baggages", "is there any fee for extra baggages"],
+      "responses": ["It depends on economy"],
+      "context_set": ""
+    },
+        {"tag": "flight_requirements",
+      "patterns": ["What documents do i need to board a flight", "Do i need a visa to book a flight", "What are the requirements to book a flight"],
+      "responses": ["To travel you will need your passport, visa and flight ticket"],
+      "context_set": ""
+    },
+        {"tag": "wifi",
+      "patterns": ["Is there wifi services on flight", "Will i have access to internet on flight", "Is wifi available"],
+      "responses": ["There are free wifi services on all flights"],
+      "context_set": ""
+    },
     {"tag": "stocks",
       "patterns": ["What are my stocks?", "Which stocks do I own?", "Show my stock portfolio"],
       "responses": ["Here are your stocks!"],
