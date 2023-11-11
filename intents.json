@@ -43,6 +43,16 @@
       "patterns": ["What are my stocks?", "Which stocks do I own?", "Show my stock portfolio"],
       "responses": ["Here are your stocks!"],
       "context_set": ""
-    }
+    },
+    {"tag": "discounts",
+      "patterns": ["Are there any discounts available", "Is there sny promotions available ", "Is there sny promo"],
+      "responses": ["There are currently no discounts or promos available"],
+      "context_set": ""
+    },
+    {"tag": "travel_location",
+      "patterns": ["Lagos to abuja", "Lagos to portharcourt", "From ... to ..."],
+      "responses": ["Here are the available flights......"],
+      "context_set": ""
+    },
   ]
   }                                                               
