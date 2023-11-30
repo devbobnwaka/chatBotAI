@@ -2,9 +2,10 @@ from neuralintents.assistants import BasicAssistant
 from fastapi import Depends
 from sqlalchemy.orm import Session
 from sql.database import SessionLocal
-from sql.crud import get_flights_by_destination
+from sql.crud import get_flights_by_destination, get_flights
 
 import time
+from utils import formatted_time
 
 # Dependency
 def get_db():
@@ -48,12 +49,28 @@ def process_message(message):
                 flight_number : {result.flight_number}
                 departure_airport : {result.departure_airport}
                 arrival_airport : {result.arrival_airport}
-                departure_datetime : {result.departure_datetime}
-                arrival_datetime : {result.arrival_datetime}
+                departure_datetime : {formatted_time(result.departure_datetime)}
+                arrival_datetime : {formatted_time(result.arrival_datetime)}
                 """
         else:
             response = "There are no available Flights found"
         print(response)
+    if response == "all_travels":
+        db = next(get_db())
+        results = get_flights(db=db)
+        if len(results) > 0:
+            response = "Here are the available Flights: "
+            for index, result in enumerate(results):
+                response += f"""
+                {index+1}. {result.airline_name} 
+                flight_number : {result.flight_number}
+                departure_airport : {result.departure_airport}
+                arrival_airport : {result.arrival_airport}
+                departure_datetime : {formatted_time(result.departure_datetime)}
+                arrival_datetime : {formatted_time(result.arrival_datetime)}
+                """
+        else:
+            response = "There are no available Flights found"
     return response
 
 # done = False

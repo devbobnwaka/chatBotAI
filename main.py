@@ -38,11 +38,11 @@ async def chatbot(msg: Message):
     response = process_message(msg.msg)
     return response
 
-@app.get("/flights/")
-def get_flights(db: Session = Depends(get_db)):
-    db_flight = crud.get_flights(db)
+@app.get("/flights/{departure}/{destination}/")
+async def get_flights(departure : str, destination : str, db: Session = Depends(get_db)):
+    db_flight = crud.get_flights_by_destination(db, departure, destination)
     return db_flight
 
 @app.post("/flights/", response_model=schemas.Flight)
-def create_flight(flight: schemas.FlightCreate, db: Session = Depends(get_db)):
+async def create_flight(flight: schemas.FlightCreate, db: Session = Depends(get_db)):
     return crud.create_flight(db=db, flight=flight)
