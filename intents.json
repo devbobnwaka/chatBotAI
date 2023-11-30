@@ -4,7 +4,7 @@
       "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
       "context_set": ""
     },
-        {"tag": "name",
+      {"tag": "name",
       "patterns": ["What is your name", "Can i know your name", "Who are you?", "May i know you", "My name is ....", "Can i meet you"],
       "responses": ["Hello! My name is Chatbox"],
       "context_set": ""
@@ -24,7 +24,7 @@
       "responses": ["# flights are available"],
       "context_set": ""
     },
-        {"tag": "extra_feezs",
+      {"tag": "extra_feezs",
       "patterns": ["What are the fees for extra baggages", "Are there fees for extra baggages", "is there any fee for extra baggages"],
       "responses": ["It depends on economy"],
       "context_set": ""
@@ -51,8 +51,8 @@
     },
     {"tag": "travel_location",
       "patterns": ["Lagos to abuja", "Lagos to portharcourt", "From ... to ..."],
-      "responses": ["Here are the available flights......"],
+      "responses": ["travel_location"],
       "context_set": ""
-    },
+    }
   ]
-  }                                                               
+}                                                               

@@ -1,9 +1,22 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import uvicorn
+from sqlalchemy.orm import Session
 
 from bot import process_message
+from sql import crud, models, schemas
+from sql.database import SessionLocal, engine
+
+models.Base.metadata.create_all(bind=engine)
+
+
+# Dependency
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 class Message(BaseModel):
     msg: str
@@ -22,5 +35,14 @@ app.add_middleware(
 
 @app.post("/chatbot/")
 async def chatbot(msg: Message):
-    message = process_message(msg.msg)
-    return message
+    response = process_message(msg.msg)
+    return response
+
+@app.get("/flights/")
+def get_flights(db: Session = Depends(get_db)):
+    db_flight = crud.get_flights(db)
+    return db_flight
+
+@app.post("/flights/", response_model=schemas.Flight)
+def create_flight(flight: schemas.FlightCreate, db: Session = Depends(get_db)):
+    return crud.create_flight(db=db, flight=flight)
