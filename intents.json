@@ -69,10 +69,10 @@
       "responses": ["In order to cancel a flight, all passengers are required to send a mail to our official mail account to request for flight cancellation"],
       "context_set": ""
     },
-        {"tag": "refund_policy",
+    {"tag": "refund_policy",
       "patterns": ["What are your cancellation requirement", "How do i cancel a flight", "What do i need to cancel a flight"],
       "responses": ["In order to request for a refund, all passengers are required to send a mail to our official mail account to request for refunds, attaching recipts and flight information"],
       "context_set": ""
-    },
+    }
   ]
 }                                                               
