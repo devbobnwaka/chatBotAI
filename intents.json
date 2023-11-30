@@ -4,6 +4,11 @@
       "responses": ["Hello!", "Hello, how may i help you", "Hi there, how can I help?"],
       "context_set": ""
     },
+      {"tag": "thanks",
+      "patterns": ["Thank you", "Thanks", "I appreciate"],
+      "responses": ["You are welcome"],
+      "context_set": ""
+    },
       {"tag": "name",
       "patterns": ["What is your name", "Can i know your name", "Who are you?", "May i know you", "My name is ....", "Can i meet you"],
       "responses": ["Hello! My name is Chatbox"],
