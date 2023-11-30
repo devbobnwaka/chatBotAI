@@ -24,7 +24,7 @@
       "responses": ["# flights are available"],
       "context_set": ""
     },
-      {"tag": "extra_feezs",
+      {"tag": "extra_fees",
       "patterns": ["What are the fees for extra baggages", "Are there fees for extra baggages", "is there any fee for extra baggages"],
       "responses": ["It depends on economy"],
       "context_set": ""
@@ -53,6 +53,26 @@
       "patterns": ["Lagos to abuja", "Lagos to portharcourt", "From ... to ..."],
       "responses": ["travel_location"],
       "context_set": ""
-    }
+    },
+    {"tag": "seat_preference",
+      "patterns": ["Can i reserve a window seat"],
+      "responses": ["Seat preference is usually dependent on availability on each flight"],
+      "context_set": ""
+    },
+    {"tag": "booking_enquiry",
+      "patterns": ["How do i book a flight with you", "What do i need to do to book a flight with you"],
+      "responses": ["Flight bookings and payments can be done on our payment page"],
+      "context_set": ""
+    },
+    {"tag": "cancellation_policy",
+      "patterns": ["What are your cancellation requirement", "How do i cancel a flight", "What do i need to cancel a flight"],
+      "responses": ["In order to cancel a flight, all passengers are required to send a mail to our official mail account to request for flight cancellation"],
+      "context_set": ""
+    },
+        {"tag": "refund_policy",
+      "patterns": ["What are your cancellation requirement", "How do i cancel a flight", "What do i need to cancel a flight"],
+      "responses": ["In order to request for a refund, all passengers are required to send a mail to our official mail account to request for refunds, attaching recipts and flight information"],
+      "context_set": ""
+    },
   ]
 }                                                               
