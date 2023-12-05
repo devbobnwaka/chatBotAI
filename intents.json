@@ -1,6 +1,6 @@
 {"intents": [
     {"tag": "greeting",
-      "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey", "greetings", "how far"],
+      "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey", "greetings",
       "responses": ["Hello, how may i help you", "Hi there, how can I help?"],
       "context_set": ""
     },
@@ -31,7 +31,7 @@
     },
     {"tag": "available_flights",
       "patterns": ["What are the available flights", "Which flights are available", "What flight is free?"],
-      "responses": ["# flights are available"],
+      "responses": ["There are currently 2 flights available"],
       "context_set": ""
     },
       {"tag": "extra_fees",
