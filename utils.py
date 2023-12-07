@@ -1,6 +1,8 @@
 from datetime import datetime
 
 def formatted_time(time_str):
+    if type(time_str) == datetime:
+        time_str = time_str.strftime("%Y-%m-%d %H:%M:%S.%f")
     timestamp = datetime.strptime(time_str, "%Y-%m-%d %H:%M:%S.%f")
     return timestamp.strftime("%Y-%m-%d %I:%M %p")
 
