@@ -1,0 +1,103 @@
+{"intents": [
+    {"tag": "greeting",
+      "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey", "greetings"],
+      "responses": ["Hello, how may i help you", "Hi there, how can I help?"],
+      "context_set": ""
+    },
+    {"tag": "How_are_you",
+      "patterns": ["How are you", "how far"],
+      "responses": ["I am fine, thank you. How may i help you?"],
+      "context_set": ""
+    },
+      {"tag": "thanks",
+      "patterns": ["Thank you", "Thanks", "I appreciate"],
+      "responses": ["You are welcome", "I am glad i could help"],
+      "context_set": ""
+    },
+      {"tag": "name",
+      "patterns": ["What is your name", "Can i know your name", "Who are you?", "May i know you", "My name is ....", "Can i meet you"],
+      "responses": ["Hello! My name is Chatbox"],
+      "context_set": ""
+    },
+    {"tag": "goodbye",
+      "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "bye", "cao", "see ya"],
+      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+      "context_set": ""
+    },
+    {"tag": "request_flight",
+      "patterns": ["I would love to book a flight", "How can i book a flight?", "I want to book a flight", "Help me book a flight", "Help me book a flight"],
+      "responses": ["You are travelling from where to where?", "From Where would you be travelling to and where would you be going to?"],
+      "context_set": ""
+    },
+    {"tag": "available_flights",
+      "patterns": ["What are the available flights", "Which flights are available", "What flight is free?"],
+      "responses": ["There are currently 2 flights available"],
+      "context_set": ""
+    },
+      {"tag": "extra_fees",
+      "patterns": ["What are the fees for extra baggages", "Are there fees for extra baggages", "is there any fee for extra baggages"],
+      "responses": ["It depends on economy"],
+      "context_set": ""
+    },
+     {"tag": "booking_confirmation",
+      "patterns": ["how will i receive my booking confirmation", "how will i receive my e-ticket", "how will i know if my confirmation is okay"],
+      "responses": ["through your mail"],
+      "context_set": ""
+    },
+    {"tag": "flight_details",
+      "patterns": ["What is the total cost of the flight", "Including taxes and fees", "is there any other associated fees"],
+      "responses": ["Ninety Thousand Naira Only"],
+      "context_set": ""
+    },
+     {"tag": "flight_requirements",
+      "patterns": ["What documents do i need to board a flight", "Do i need a visa to book a flight", "What are the requirements to book a flight"],
+      "responses": ["To travel you will need your passport, visa and flight ticket"],
+      "context_set": ""
+    },
+    {"tag": "seat_reservations",
+      "patterns": ["can i choose my seat in advance", "how can i choose my seat", "What are the requirements for choosing my seat"],
+      "responses": ["yes, from our online platform"],
+      "context_set": ""
+    },
+        {"tag": "wifi",
+      "patterns": ["Is there wifi services on flight", "Will i have access to internet on flight", "Is wifi available"],
+      "responses": ["There are free wifi services on all flights"],
+      "context_set": ""
+    },
+    {"tag": "stocks",
+      "patterns": ["What are my stocks?", "Which stocks do I own?", "Show my stock portfolio"],
+      "responses": ["Here are your stocks!"],
+      "context_set": ""
+    },
+    {"tag": "discounts",
+      "patterns": ["Are there any discounts available", "Is there sny promotions available ", "Is there sny promo"],
+      "responses": ["There are currently no discounts or promos available"],
+      "context_set": ""
+    },
+    {"tag": "travel_location",
+      "patterns": ["Lagos to abuja", "Lagos to portharcourt", "From ... to ..."],
+      "responses": ["travel_location"],
+      "context_set": ""
+    },
+    {"tag": "seat_preference",
+      "patterns": ["Can i reserve a window seat"],
+      "responses": ["Seat preference is usually dependent on availability on each flight"],
+      "context_set": ""
+    },
+    {"tag": "booking_enquiry",
+      "patterns": ["How do i book a flight with you", "What do i need to do to book a flight with you"],
+      "responses": ["Flight bookings and payments can be done on our payment page"],
+      "context_set": ""
+    },
+    {"tag": "cancellation_policy",
+      "patterns": ["What are your cancellation requirement", "How do i cancel a flight", "What do i need to cancel a flight"],
+      "responses": ["In order to cancel a flight, all passengers are required to send a mail to our official mail account to request for flight cancellation"],
+      "context_set": ""
+    },
+    {"tag": "refund_policy",
+      "patterns": ["What are your cancellation requirement", "How do i cancel a flight", "What do i need to cancel a flight"],
+      "responses": ["In order to request for a refund, all passengers are required to send a mail to our official mail account to request for refunds, attaching recipts and flight information"],
+      "context_set": ""
+    }
+  ]
+}                                                               
