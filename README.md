@@ -5,7 +5,8 @@
 
 
 .venv\Scripts\activate
-uvicorn main:app --reload --port 9000
+uvi
+corn main:app --reload --port 9000
 
 
 '''
